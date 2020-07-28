@@ -1,29 +1,57 @@
-Form.Control[type=text] {
+.green {
+  color: #379683;
+}
+
+input {
+ -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
   border-radius: 15px;
- -webkit-border-radius: 20px;
- -moz-border-radius: 20px;
-  border-radius: 20px;
   border: 1px solid #5D5C61;
-  color: #B1A296;
+  color: #5D5C61;
   width: 250px;
   height: 30px;
   padding-left: 10px;
+  margin: 2px 15px;
 
 }
 
-.Form.Control[type=text]:focus {
+input:focus {
+  outline: none;
+  border: 2px solid #557A95;
+  background-color: snow;
+  color: #5D5C61;
+}
+
+button[type=submit] {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+   border-radius: 15px;
+   border: 1px solid #5D5C61;
+   background-color: #B1A296;
+   color: snow;
+   width: 250px;
+   height: 30px;
+   padding-left: 10px;
+   margin: 2px 15px;
+
+}
+
+button[type=submit]:focus{
   outline: none;
   border: 1px solid #557A95;
   color: snow;
+
 }
 
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
   pointer-events: none;
+  margin: auto 15px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,19 +60,21 @@ Form.Control[type=text] {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p.App-header {
+  margin: auto 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  background-color: #5D5C61;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  
+  font-family: 'Nova Square', cursive;
+  color: #63bba9;
+  font-size: 40px;
+  margin: auto 5px;
 }
 
 @keyframes App-logo-spin {

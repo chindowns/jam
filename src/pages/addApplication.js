@@ -24,7 +24,7 @@ export default () => {
 
         set(getApplication.companyName, newApplication, applicationStore)
             .then(() => window.location.reload(false))
-            .catch((e) => console.log('It failed!', e));
+            .catch((err) => console.log('It failed!', err));
 
     }
 

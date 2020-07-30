@@ -2,6 +2,14 @@
   color: #379683;
 }
 
+.slate-blue {
+  color: #7395AE;
+}
+
+.slate-dark {
+  color: #557A95;
+}
+
 input {
  -webkit-border-radius: 15px;
  -moz-border-radius: 15px;
@@ -20,6 +28,10 @@ input:focus {
   border: 2px solid #557A95;
   background-color: snow;
   color: #5D5C61;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 button[type=submit] {
@@ -42,7 +54,6 @@ button[type=submit]:focus{
   color: snow;
 
 }
-
 
 .App {
   text-align: left;

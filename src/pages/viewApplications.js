@@ -13,7 +13,6 @@ export default () => {
 
     function loadApplications() {
         keys(applicationStore).then(keys => {
-            keys.sort((a, b) => (a.stage > b.stage) ? 1 : -1);
             keys.forEach(key => {
                 get(key, applicationStore).then(jobApp => setApplications(applications => [...applications, jobApp]))
             })

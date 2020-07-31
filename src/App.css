@@ -45,7 +45,6 @@ button[type=submit] {
    height: 30px;
    padding-left: 10px;
    margin: 2px 15px;
-
 }
 
 button[type=submit]:focus{

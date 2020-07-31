@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from './logo-white.png';
 import './App.css';
-import './Custom.scss'
 import AddApplication from './pages/addApplication';
 import ViewApplication from './pages/viewApplications';
 import EditApplication from './pages/editApplication';

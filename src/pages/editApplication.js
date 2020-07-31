@@ -1,77 +1,90 @@
-import React, { useState } from "react";
-// import { Store, del, set } from 'idb-keyval';
-// import {useHistory} from 'react-router-dom';
- 
+import React, { useState, useEffect } from "react";
+import { Store, del, set } from 'idb-keyval';
+import { useHistory } from 'react-router-dom';
+
 export default (props) => {
 
-    // const [application, setApplication] = useState({});
-    // const applicationStore = new Store('job-manager', 'applications')
-    // const history = useHistory();
+    const [application, setApplication] = useState({});
+    const applicationStore = new Store('job-manager', 'applications')
+    const history = useHistory();
+    let tempApp = {}
 
-    // setApplication(props)
-    console.log(props)
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const updateApplication = {
-    //         "companyName": application.companyName,
-    //         "jobTitle": application.jobTitle,
-    //         "jobDescription": application.jobDescription,
-    //         "source": application.source,
-    //         "resume": application.resume,
-    //         "dateApplied": application.dateApplied,
-    //         "stage": application.stage
-    //     }
+    props.location.data.application ? tempApp = props.location.data.application : tempApp = {};
 
-    //     del(application.companyName, applicationStore)
+    useEffect(() => {
+        setApplication(tempApp);
+    }, [])
 
-    //     set(application.companyName, updateApplication, applicationStore)
-    //         .then(() => history.replace('/view'))
-    //         .catch((err) => console.log('It failed!', err));
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(e)
+        const updateApplication = {
+            "companyName": application.companyName,
+            "jobTitle": application.jobTitle,
+            "jobDescription": application.jobDescription,
+            "source": application.source,
+            "resume": application.resume,
+            "dateApplied": application.dateApplied,
+            "stage": application.stage
+        }
+
+        del(application.companyName, applicationStore)
+            .then(() => {
+                set(application.companyName, updateApplication, applicationStore)
+                    .then(() => history.replace('/view'))
+                    .catch((err) => console.log('It failed!', err));
+            })
+            .catch((err) => console.log('Failed to delete', err));
+
+
+    }
 
     return (
         <>
-            <form className="form-group" >
+            <form className="form-group" onSubmit={handleSubmit}>
                 <input id="inputCompanyName"
+                    readOnly="readOnly"
                     type="text"
-                    name="companyName"
-                />
+                    name="companyName" 
+                    value={tempApp.companyName} />
                 <input id="inputJobTitle"
                     type="text"
                     name="jobTitle"
-                />
+                    defaultValue={tempApp.jobTitle}
+                    onChange={e => setApplication({ ...application, 'jobTitle': e.target.value ? e.target.value : tempApp.jobTitle })} />
                 <br />
                 <input id="inpurtSource"
                     type="url"
                     name="source"
-                />
+                    defaultValue={tempApp.source}
+                    onChange={e => setApplication({ ...application, 'source': e.target.value ? e.target.value : tempApp.source })} />
                 <input id="inputResume"
                     type="url"
                     name="resume"
-                />
-                <input id="inputdateApplied"
-                    type="text"
-                    name="dateApplied"
-                />
-                {/* <input id="inputStage"
-                    type="text"
+                    defaultValue={tempApp.resume}
+                    onChange={e => setApplication({ ...application, 'resume': e.target.value ? e.target.value : tempApp.resume })} />
+                <input id="inputStage"
+                    type="select"
                     name="stage"
                     list="stages"
-                    defaultValue=""
-                    onChange={e => setApplication({ ...application, 'stage': e.target.value })} />
-                    <datalist id="stages">
-                        <option value="0 - Declined" />
-                        <option value="1 - Applied" />
-                        <option value="2 - Recruiter" />
-                        <option value="3 - Interview" />
-                        <option value="4 - Hired" />
-                    </datalist> */}
+                    placeholder={tempApp.stage}
+                    onChange={e => setApplication({ ...application, 'stage': e.target.value ? e.target.value ? e.target.value : tempApp.stage : tempApp.stage })} />
+                <datalist id="stages">
+                    <option value="0 - Declined" />
+                    <option value="1 - Applied" />
+                    <option value="2 - Recruiter" />
+                    <option value="3 - Interview" />
+                    <option value="4 - Hired" />
+                </datalist>
 
                 <br />
-                <input id="inputJobDescription"
+                <textarea id="inputJobDescription"
+                    style={{ width: "600px", height: "300px", display: "float-right" }}
                     type="text"
                     name="jobDescription"
-                />
+                    defaultValue={tempApp.jobDescription}
+                    onChange={e => setApplication({ ...application, 'jobDescription': e.target.value ? e.target.value : tempApp.jobDescription })} />
+
                 <button type="submit">Submit Application</button>
             </form>
         </>

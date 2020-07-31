@@ -29,8 +29,8 @@ export default (props) => {
                     {application.jobDescription.split(' ').slice(0,25).join(' ')}
                 </Card.Text>
                 <Row md={{ span: 4, offset: 4 }}>
-                    <Col><a href={application.source} target="_blank" className="underline slate-blue" >Job Posting</a></Col>
-                    <Col><a href={application.resume} target="_blank" className="underline slate-blue" >Resume Link</a></Col>
+                    <Col><a href={application.source} target="_blank" rel="noopener noreferrer" className="underline slate-blue" >Job Posting</a></Col>
+                    <Col><a href={application.resume} target="_blank" rel="noopener noreferrer" className="underline slate-blue" >Resume Link</a></Col>
                 </Row>
             </Card.Body>
             <Card.Footer className="d-flex justify-content-around">

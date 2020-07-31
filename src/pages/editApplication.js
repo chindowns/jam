@@ -13,7 +13,7 @@ export default (props) => {
 
     useEffect(() => {
         setApplication(tempApp);
-    }, [tempApp.length])
+    }, [tempApp])
 
     const handleSubmit = (e) => {
         e.preventDefault()

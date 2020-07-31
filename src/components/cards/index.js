@@ -3,7 +3,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Card, Row, Col, Button } from 'react-bootstrap'
-import './card.css'
 
 export default (props) => {
 
@@ -27,7 +26,7 @@ export default (props) => {
             <Card.Body>
                 <Card.Title>{application.jobTitle}</Card.Title>
                 <Card.Text style={{fontWeight: '300'}}>
-                    {application.jobDescription.slice(0,300)}
+                    {application.jobDescription.split(' ').slice(0,25).join(' ')}
                 </Card.Text>
                 <Row md={{ span: 4, offset: 4 }}>
                     <Col><a href={application.source} target="_blank" className="underline slate-blue" >Job Posting</a></Col>

@@ -13,11 +13,10 @@ export default (props) => {
 
     useEffect(() => {
         setApplication(tempApp);
-    }, [])
+    }, [tempApp.length])
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(e)
         const updateApplication = {
             "companyName": application.companyName,
             "jobTitle": application.jobTitle,

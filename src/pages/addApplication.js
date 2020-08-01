@@ -45,7 +45,11 @@ export default () => {
                 <input id="inpurtSource"
                     type="url"
                     name="source"
-                    onChange={e => setApplication({ ...getApplication, 'source': e.target.value })}
+                    onChange={e => {
+                        setApplication({ ...getApplication, 'source': e.target.value });
+                        fetch(getApplication.source)
+                        .then(response => console.log(response))
+                }}
                     placeholder="Link to Source" />
                 <input id="inputResume"
                     type="url"
@@ -58,7 +62,7 @@ export default () => {
                     name="jobDescription"
                     onChange={e => setApplication({ ...getApplication, 'jobDescription': e.target.value })}
                     placeholder="Job Description" />
-                {/* <Button type="submit" >Submit Appliaction</Button> */}
+
                 <button type="submit">Submit Application</button>
             </form>
         </>

@@ -45,7 +45,7 @@ export default () => {
 
     return (
         <Row style={{ margin: '15px 15px' }}>
-            {applications.sort(compareValues('stage')).map((application, idx) => (<Card application={application} key={idx} />))}
+            {applications.sort(compareValues('stage')).map((application, idx) => (<Card application = {application} key = {idx} />))}
         </Row>
     )
 }

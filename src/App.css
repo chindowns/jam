@@ -10,6 +10,13 @@
   color: #557A95;
 }
 
+.form-add {
+  justify-content: center;
+  display: flexbox;
+  flex-direction: row wrap;
+  
+}
+
 input {
  -webkit-border-radius: 15px;
  -moz-border-radius: 15px;
@@ -20,7 +27,13 @@ input {
   height: 30px;
   padding-left: 10px;
   margin: 2px 15px;
+  justify-content: center;
 
+}
+
+input[type=textarea] {
+  height: 200px;
+  width: 530px;
 }
 
 input:focus {
@@ -41,7 +54,7 @@ button[type=submit] {
    border: 1px solid #5D5C61;
    background-color: #B1A296;
    color: snow;
-   width: 250px;
+   width: 530px;
    height: 30px;
    padding-left: 10px;
    margin: 2px 15px;
@@ -51,7 +64,6 @@ button[type=submit]:focus{
   outline: none;
   border: 1px solid #557A95;
   color: snow;
-
 }
 
 .App {

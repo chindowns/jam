@@ -41,12 +41,12 @@ export default (props) => {
     return (
         <>
             <form className="form-group" onSubmit={handleSubmit}>
-                <input id="inputCompanyName"
+                <input id="editCompanyName"
                     readOnly="readOnly"
                     type="text"
                     name="companyName" 
                     value={tempApp.companyName} />
-                <input id="inputJobTitle"
+                <input id="editJobTitle"
                     type="text"
                     name="jobTitle"
                     defaultValue={tempApp.jobTitle}
@@ -57,12 +57,13 @@ export default (props) => {
                     name="source"
                     defaultValue={tempApp.source}
                     onChange={e => setApplication({ ...application, 'source': e.target.value ? e.target.value : tempApp.source })} />
-                <input id="inputResume"
+                <input id="editResume"
                     type="url"
                     name="resume"
                     defaultValue={tempApp.resume}
                     onChange={e => setApplication({ ...application, 'resume': e.target.value ? e.target.value : tempApp.resume })} />
-                <input id="inputStage"
+                <br />
+                <input id="editStage"
                     type="select"
                     name="stage"
                     list="stages"
@@ -77,13 +78,12 @@ export default (props) => {
                 </datalist>
 
                 <br />
-                <textarea id="inputJobDescription"
-                    style={{ width: "600px", height: "300px", display: "float-right" }}
-                    type="text"
+                <input id="editJobDescription"
+                    type="textarea"
                     name="jobDescription"
                     defaultValue={tempApp.jobDescription}
                     onChange={e => setApplication({ ...application, 'jobDescription': e.target.value ? e.target.value : tempApp.jobDescription })} />
-
+                <br />
                 <button type="submit">Submit Application</button>
             </form>
         </>

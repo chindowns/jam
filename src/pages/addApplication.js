@@ -30,7 +30,7 @@ export default () => {
 
     return (
         <>
-            <form className="form-group" onSubmit={handleSubmit}>
+            <form className="form-group form-add" onSubmit={handleSubmit}>
                 <input id="inputCompanyName"
                     type="text"
                     name="companyName"
@@ -58,11 +58,11 @@ export default () => {
                     placeholder="Link to Resume" />
                 <br />
                 <input id="inputJobDescription"
-                    type="text"
+                    type="textarea"
                     name="jobDescription"
                     onChange={e => setApplication({ ...getApplication, 'jobDescription': e.target.value })}
                     placeholder="Job Description" />
-
+                <br />
                 <button type="submit">Submit Application</button>
             </form>
         </>

@@ -1,5 +1,5 @@
 import React from 'react';
-// USE HashRouter vs BrowserRouter to display on gh-pages
+// USE HashRouter vs BrowserRouter to display on G
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav, Form, FormControl, Button} from 'react-bootstrap';
 import logo from './logo-white.png';

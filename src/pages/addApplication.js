@@ -60,6 +60,9 @@ export default () => {
                 <input id="inputJobDescription"
                     type="textarea"
                     name="jobDescription"
+                    wrap="soft"
+                    rows="10"
+                    cols="75"
                     onChange={e => setApplication({ ...getApplication, 'jobDescription': e.target.value })}
                     placeholder="Job Description" />
                 <br />

@@ -78,9 +78,12 @@ export default (props) => {
                 </datalist>
 
                 <br />
-                <input id="editJobDescription"
+                <textarea id="editJobDescription"
                     type="textarea"
                     name="jobDescription"
+                    wrap="soft"
+                    rows="10"
+                    cols="75"
                     defaultValue={tempApp.jobDescription}
                     onChange={e => setApplication({ ...application, 'jobDescription': e.target.value ? e.target.value : tempApp.jobDescription })} />
                 <br />

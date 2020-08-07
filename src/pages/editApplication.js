@@ -139,22 +139,24 @@ export default (props) => {
                         </label>
                     </>)
                     :
-                    <div className="radius text-left">
-                        <a  className="fa fa-pencil-square-o text-right" style={{ position: "relative", float: "right", padding: "1px 3px 1px 7px" }} onClick={e=> setEditJobDescription(true)}>
-                        </a>
-                        {tempJobDescription.overview}
-                        <br />
-                        {tempJobDescription.responsibilities}
-                        <br />
-                        {tempJobDescription.requirements}
+                    <label className="form-label">Job Description<br />
+                        <div className="radius text-left">
+                            <div className="fa fa-pencil-square-o text-right" style={{ position: "relative", float: "right", padding: "1px 3px 1px 7px" }} onClick={e => setEditJobDescription(true)}>
+                            </div>
+                            {tempJobDescription.overview}
+                            <br />
+                            {tempJobDescription.responsibilities}
+                            <br />
+                            {tempJobDescription.requirements}
 
-                    </div>
+                        </div>
+                    </label>
                 }
                 {tempNotes ?
                     <label className="form-label">Notes
                         <div className="radius">
                             {tempNotes.map((note, idx) => (<Note note={note} key={idx} />))}
-                        </div> 
+                        </div>
                     </label>
                     : null}
                 <br />
@@ -169,7 +171,7 @@ export default (props) => {
                         type="textarea"
                         name="note"
                         onChange={e => setContactNote({ ...contactNote, 'note': e.target.value })} />
-                </label>
+                </label><br />
                 <button type="submit">Submit Application</button>
             </form>
         </div>

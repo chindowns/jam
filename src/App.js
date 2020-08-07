@@ -1,7 +1,9 @@
 import React from 'react';
 // USE HashRouter vs BrowserRouter to display on G
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import { Nav, Form, FormControl, Button} from 'react-bootstrap';
+// import { Nav, Form, FormControl, Button} from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+
 import logo from './logo-white.png';
 import './App.css';
 import AddApplication from './pages/addApplication';
@@ -22,10 +24,10 @@ function App() {
             <Nav.Link className="nav" href="#/view">View Application</Nav.Link>
             <Nav.Link className="nav" href="#/add">Add Applications</Nav.Link>
           </Nav>
-          <Form inline>
+          {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info">Search</Button>
-          </Form>
+          </Form> */}
 
       </header>
 

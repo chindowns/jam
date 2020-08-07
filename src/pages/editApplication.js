@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 export default (props) => {
 
     const [application, setApplication] = useState({});
+    const [jobDescription, setJobDescription] = useState({});
+
     const applicationStore = new Store('job-manager', 'applications')
     const history = useHistory();
     let tempApp = {}
@@ -20,7 +22,7 @@ export default (props) => {
         const updateApplication = {
             "companyName": application.companyName,
             "jobTitle": application.jobTitle,
-            "jobDescription": application.jobDescription,
+            "jobDescription": jobDescription,
             "source": application.source,
             "resume": application.resume,
             "dateApplied": application.dateApplied,

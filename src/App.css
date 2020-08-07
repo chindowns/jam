@@ -10,11 +10,23 @@
   color: #557A95;
 }
 
+.form{
+  display: flexbox;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 20px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px #5D5C61;
+  margin: 10px 15px 0px 15px; 
+}
+
 .form-add {
   justify-content: center;
   display: flexbox;
   flex-direction: row wrap;
-  
 }
 
 input, textarea {
@@ -23,16 +35,18 @@ input, textarea {
   border-radius: 15px;
   border: 1px solid #5D5C61;
   color: #5D5C61;
+  font-size: 15px;
+  font-weight: 400px;
   width: 250px;
   height: 30px;
   padding-left: 10px;
-  margin: 2px 15px;
+  margin: 2px 0px;
   justify-content: center;
 
 }
 
 textarea[type=textarea] {
-  height: 200px;
+  height: 100px;
   width: 530px;
 }
 

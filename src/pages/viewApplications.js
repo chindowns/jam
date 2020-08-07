@@ -19,7 +19,9 @@ export default () => {
         })
     }
 
+    // Campares the property value of Stage for each application
     function compareValues(stage, order = 'desc') {
+        // Sorts the application by 'stage' in descending order so '0-declined' goes to the end of the list
         return function innerSort(a, b) {
           if (!a.hasOwnProperty(stage) || !b.hasOwnProperty(stage)) {
             // property doesn't exist on either object

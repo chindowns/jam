@@ -70,8 +70,6 @@ export default () => {
                     type="textarea"
                     name="jobDescription-Overview"
                     wrap="soft"
-                    rows="10"
-                    cols="75"
                     onChange={e => setJobDescription({ ...jobDescription, 'overview': e.target.value })}
                     placeholder="Job Description Overview" />
                 </label>
@@ -81,8 +79,6 @@ export default () => {
                         type="textarea"
                         name="jobDescription-Responsibilities"
                         wrap="soft"
-                        rows="10"
-                        cols="75"
                         onChange={e => setJobDescription({ ...jobDescription, 'responsibilities': e.target.value })}
                         placeholder="Job Description Responsibilities" />
                 </label>
@@ -92,10 +88,8 @@ export default () => {
                         type="textarea"
                         name="jobDescription-Requirements"
                         wrap="soft"
-                        rows="10"
-                        cols="75"
                         onChange={e => setJobDescription({ ...jobDescription, 'requirements': e.target.value })}
-                        placeholder="Job Description Responsibilities" />
+                        placeholder="Job Description Requirements" />
                 </label>
                 <br />
 

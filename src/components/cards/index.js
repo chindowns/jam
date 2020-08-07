@@ -1,16 +1,12 @@
 //CARD INDEX.JS
 
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { Card, Row, Col, Button } from 'react-bootstrap'
-import cheerio from 'cheerio';
+import { Link } from 'react-router-dom';
+import { Card, Row, Col, Button } from 'react-bootstrap';
 
 export default (props) => {
 
     let application = props.application;
-
-    let jobPostingInfo = [];
-    let $ = cheerio.load('');
 
     return (
         <Card bg='dark'

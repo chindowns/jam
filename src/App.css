@@ -10,6 +10,14 @@
   color: #557A95;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .form{
   display: flexbox;
   justify-content: center;
@@ -27,6 +35,20 @@
   justify-content: center;
   display: flexbox;
   flex-direction: row wrap;
+}
+
+.radius {
+  background-color: white;
+  margin: auto;
+  padding: 15px;
+ -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid #5D5C61;
+  color: #5D5C61;
+  font-size: 15px;
+  font-weight: 400px;
+  width: 530px;
 }
 
 input, textarea {
@@ -78,6 +100,23 @@ button[type=submit]:focus{
   outline: none;
   border: 1px solid #557A95;
   color: snow;
+}
+
+.note-head {
+    display: flex;
+    flex-wrap: justify-content-between;
+    background-color: whitesmoke;
+    font-weight: 600;
+    margin:0px ;
+    padding: 0px auto;
+    /* border-bottom: 1px solid #5D5C61; */
+    text-shadow: none;
+}
+
+.note-text {
+    padding: auto 15px;
+    margin: auto 15px;
+    text-shadow: none;
 }
 
 .App {

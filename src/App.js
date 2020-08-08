@@ -34,9 +34,9 @@ function App() {
       <Router basename="/jam/#">
         <Switch>
           <Route exact path="/jam/#" component={ViewApplication} />
-          <Route exact path="/#view" component={ViewApplication} />
-          <Route exact path="/#add" component={AddApplication} />
-          <Route exact path="/#edit" component={EditApplication} />
+          <Route path="/view" component={ViewApplication} />
+          <Route path="/add" component={AddApplication} />
+          <Route path="/edit" component={EditApplication} />
         </Switch>
       </Router>
     </div>

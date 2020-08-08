@@ -18,6 +18,10 @@
   text-align: right;
 }
 
+.text-shadow {
+    text-shadow: 1px 1px 2px #5D5C61;
+}
+
 .form{
   display: flexbox;
   justify-content: center;
@@ -143,15 +147,11 @@ header {
   padding: 0px 15px;
 }
 
-p.App-header {
-  margin: auto 0px;
-}
-
 .App-header {
   font-family: 'Nova Square', cursive;
   color: #63bba9;
   font-size: 40px;
-  margin: auto 5px;
+  margin: auto 0;
 }
 
 .nav {
@@ -167,6 +167,14 @@ p.App-header {
 
 .nav:focus {
   color: snow ;
+}
+
+#jumbo {
+  margin: 50px auto;
+}
+
+#search-form {
+  opacity: 0;
 }
 
 @keyframes App-logo-spin {

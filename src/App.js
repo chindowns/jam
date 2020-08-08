@@ -1,8 +1,8 @@
 import React from 'react';
 // USE HashRouter vs BrowserRouter to display on G
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-// import { Nav, Form, FormControl, Button} from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
+import { Nav, Form, FormControl, Button} from 'react-bootstrap';
+// import { Nav } from 'react-bootstrap';
 import { Store, keys } from 'idb-keyval';
 
 import logo from './logo-white.png';
@@ -13,9 +13,9 @@ import ViewApplication from './pages/viewApplications';
 import EditApplication from './pages/editApplication';
 
 function App() {
-  const dbExists = false;
+  let dbExists = false;
   const applicationStore = new Store('job-manager', 'applications');
-  const LandingPage = Home;
+  let LandingPage = Home;
 
   keys(applicationStore).then(keys => dbExists = true)
 
@@ -34,10 +34,10 @@ function App() {
           <Nav.Link className="nav" href="/jam/#/view">View Application</Nav.Link>
           <Nav.Link className="nav" href="/jam/#/add">Add Applications</Nav.Link>
         </Nav>
-        {/* <Form inline>
+        <Form inline id="search-form">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-info">Search</Button>
-          </Form> */}
+        </Form>
 
       </header>
 

@@ -3,7 +3,6 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav, Form, FormControl, Button} from 'react-bootstrap';
 // import { Nav } from 'react-bootstrap';
-import { Store, keys } from 'idb-keyval';
 
 import logo from './logo-white.png';
 import './App.css';
@@ -13,13 +12,6 @@ import ViewApplication from './pages/viewApplications';
 import EditApplication from './pages/editApplication';
 
 function App() {
-  let dbExists = false;
-  const applicationStore = new Store('job-manager', 'applications');
-  let LandingPage = Home;
-
-  keys(applicationStore).then(keys => dbExists = true)
-
-  dbExists ? LandingPage = ViewApplication : LandingPage = Home;
 
   return (
     <div className="App">
@@ -43,7 +35,7 @@ function App() {
 
       <Router >
         <Switch>
-          <Route exact path="/jam" component={LandingPage} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/view" component={ViewApplication} />
           <Route exact path="/add" component={AddApplication} />

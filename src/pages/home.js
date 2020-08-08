@@ -1,8 +1,16 @@
 import React from 'react';
-
-
+import { useHistory } from 'react-router-dom';
+import { Store, keys } from 'idb-keyval';
 
 export default () => {
+    const applicationStore = new Store('job-manager', 'applications');
+    const history = useHistory();
+
+    // if applications exist show View Applications
+    keys(applicationStore).then(keys => {
+       if (keys.length > 0)  {history.replace('/view')} ;
+    })
+
     return (
         <div id="jumbo" className="radius">
             <h1 className="text-shadow slate-blue">Job Application Manager</h1>

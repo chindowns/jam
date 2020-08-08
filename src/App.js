@@ -1,6 +1,6 @@
 import React from 'react';
 // USE HashRouter vs BrowserRouter to display on G
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // import { Nav, Form, FormControl, Button} from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 
@@ -31,7 +31,7 @@ function App() {
 
       </header>
 
-      <Router basename="/jam/#">
+      <Router >
         <Switch>
           <Route exact path="/jam/#" component={ViewApplication} />
           <Route exact path="/view" component={ViewApplication} />

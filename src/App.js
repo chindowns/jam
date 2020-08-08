@@ -21,8 +21,8 @@ function App() {
         
         <Nav variant="" className=" nav m-auto">
             <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/jam">Home</Nav.Link>
-            <Nav.Link className="nav" href="/#view">View Application</Nav.Link>
-            <Nav.Link className="nav" href="/#add">Add Applications</Nav.Link>
+            <Nav.Link className="nav" href="/jam/#view">View Application</Nav.Link>
+            <Nav.Link className="nav" href="/jam/#add">Add Applications</Nav.Link>
           </Nav>
           {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

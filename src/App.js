@@ -43,7 +43,7 @@ function App() {
 
       <Router >
         <Switch>
-          <Route exact path="/jam/#" component={LandingPage} />
+          <Route exact path="/jam" component={LandingPage} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/view" component={ViewApplication} />
           <Route exact path="/add" component={AddApplication} />

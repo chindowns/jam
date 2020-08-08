@@ -1,6 +1,6 @@
 import React from 'react';
 // USE HashRouter vs BrowserRouter to display on G
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import { Nav, Form, FormControl, Button} from 'react-bootstrap';
 import { Nav } from 'react-bootstrap';
 
@@ -20,9 +20,9 @@ function App() {
         </p>
         
         <Nav variant="" className=" nav m-auto">
-            <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/#">Home</Nav.Link>
-            <Nav.Link className="nav" href="/view">View Application</Nav.Link>
-            <Nav.Link className="nav" href="/add">Add Applications</Nav.Link>
+            <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/jam">Home</Nav.Link>
+            <Nav.Link className="nav" href="/#view">View Application</Nav.Link>
+            <Nav.Link className="nav" href="/#add">Add Applications</Nav.Link>
           </Nav>
           {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -31,12 +31,12 @@ function App() {
 
       </header>
 
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/#" component={ViewApplication} />
-          <Route path="/view" component={ViewApplication} />
-          <Route path="/add" component={AddApplication} />
-          <Route path="/edit" component={EditApplication} />
+          <Route exact path="/" component={ViewApplication} />
+          <Route exact path="/view" component={ViewApplication} />
+          <Route exact path="/add" component={AddApplication} />
+          <Route exact path="/edit" component={EditApplication} />
         </Switch>
       </Router>
     </div>

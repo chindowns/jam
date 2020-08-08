@@ -151,6 +151,7 @@ export default (props) => {
                         </div>
                     </label>
                 }
+                <br />
                 {tempNotes ?
                     <label className="form-label">Notes
                         <div className="radius">

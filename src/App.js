@@ -33,10 +33,10 @@ function App() {
 
       <Router basename="/jam">
         <Switch>
-          <Route exact path="/" component={ViewApplication} />
-          <Route exact path="/view" component={ViewApplication} />
-          <Route exact path="/add" component={AddApplication} />
-          <Route exact path="/edit" component={EditApplication} />
+          <Route exact path="/jam/#" component={ViewApplication} />
+          <Route exact path="/jam/#view" component={ViewApplication} />
+          <Route exact path="/jam/#add" component={AddApplication} />
+          <Route exact path="/jam/#edit" component={EditApplication} />
         </Switch>
       </Router>
     </div>

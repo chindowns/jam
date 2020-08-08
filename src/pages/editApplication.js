@@ -58,7 +58,6 @@ export default (props) => {
                     .catch((err) => console.log('It failed!', err));
             })
             .catch((err) => console.log('Failed to delete', err));
-
     }
 
     return (

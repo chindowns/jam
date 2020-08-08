@@ -20,9 +20,9 @@ function App() {
         </p>
         
         <Nav variant="" className=" nav m-auto">
-            <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/jam">Home</Nav.Link>
-            <Nav.Link className="nav" href="/jam/#view">View Application</Nav.Link>
-            <Nav.Link className="nav" href="/jam/#add">Add Applications</Nav.Link>
+            <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/">Home</Nav.Link>
+            <Nav.Link className="nav" href="/view">View Application</Nav.Link>
+            <Nav.Link className="nav" href="/add">Add Applications</Nav.Link>
           </Nav>
           {/* <Form inline>
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -34,9 +34,9 @@ function App() {
       <Router basename="/jam/#">
         <Switch>
           <Route exact path="/jam/#" component={ViewApplication} />
-          <Route path="/view" component={ViewApplication} />
-          <Route path="/add" component={AddApplication} />
-          <Route path="/edit" component={EditApplication} />
+          <Route exact path="/view" component={ViewApplication} />
+          <Route exact path="/add" component={AddApplication} />
+          <Route exact path="/edit" component={EditApplication} />
         </Switch>
       </Router>
     </div>

@@ -17,7 +17,7 @@ export default (props) => {
         >
             <Card.Header className="d-flex justify-content-between align-center">
                 {application.companyName}
-                <Link to={{pathname: '/edit/', data:{application}}}>
+                <Link to={{pathname: '/edit', data:{application}}}>
                     <Button variant="outline-secondary" className="fa fa-pencil-square-o" style={{ padding: "1px 3px 1px 7px" }} >
                     </Button>
                 </Link>

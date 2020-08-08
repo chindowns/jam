@@ -31,7 +31,7 @@ function App() {
 
       </header>
 
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/jam">
         <Switch>
           <Route exact path="/" component={ViewApplication} />
           <Route exact path="/view" component={ViewApplication} />

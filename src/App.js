@@ -16,10 +16,12 @@ function App() {
   return (
     <div className="App">
       <header className="">
+        <div id="brand">
         <img src={logo} className="App-logo" alt="logo" />
         <p className="App-header">
           JAM
         </p>
+        </div>
 
         <Nav variant="" className=" nav m-auto">
           {/* <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/jam/#/home">Home</Nav.Link> */}

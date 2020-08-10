@@ -1,4 +1,4 @@
-# JAM - Job Application Manager
+# JAM - Job Application Manager Light
 https://chindowns.github.io/jam
 
 This job application manager helps you manage the job you have applied, track status, and view overall all the companies you have applied to.  In today's market, this can be very daunting and JAM is here to help you keep track of important information.    
@@ -13,5 +13,7 @@ I am interested to hear feedback and receive suggestons for a wishlist.
 1. click the link above.
 2. click "Add Applications"
 3. add the details.  Note to use the full url for Job Posting Source and your online version of your Resume.
+
+![site](./JAM.gif)
 
 Please let me know how you like the app.

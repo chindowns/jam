@@ -21,14 +21,14 @@ export default (props) => {
 
     // Setting State for application, jobDescription & 
     props.location.data.application ? tempApp = props.location.data.application : tempApp = {};
-    props.location.data.application.jobDescription ? tempJobDescription = props.location.data.application.jobDescription : tempJobDescription = {};
+    // props.location.data.application.jobDescription ? tempJobDescription = props.location.data.application.jobDescription : tempJobDescription = {};
 
     // Setting tempNotes to props so contactNote can be added with push.
     props.location.data.application.notes ? tempNotes = props.location.data.application.notes : tempNotes = [];
 
     useEffect(() => {
         setApplication(tempApp);
-        setJobDescription(tempJobDescription);
+        setJobDescription(tempApp.jobDescription);
     }, [tempApp.length])
 
     const handleSubmit = (e) => {
@@ -98,7 +98,7 @@ export default (props) => {
                         type="select"
                         name="stage"
                         list="stages"
-                        defaultValue={tempApp.stage}
+                        placeholder={tempApp.stage}
                         onChange={e => setApplication({ ...application, 'stage': e.target.value ? e.target.value : tempApp.stage })} />
                     <datalist id="stages">
                         <option value="0 - Declined" />
@@ -140,13 +140,13 @@ export default (props) => {
                     :
                     <label className="form-label">Job Description<br />
                         <div className="radius text-left">
-                            <div className="fa fa-pencil-square-o text-right" style={{ position: "relative", float: "right", padding: "1px 3px 1px 7px" }} onClick={e => setEditJobDescription(true)}>
+                            <div className="fa fa-pencil-square-o" style={{ position: "relative", float: "right", padding: "1px 3px 1px 7px" }} onClick={e => setEditJobDescription(true)}>
                             </div>
-                            {tempJobDescription.overview}
+                            {tempApp.jobDescription.overview}
                             <br />
-                            {tempJobDescription.responsibilities}
+                            {tempApp.jobDescription.responsibilities}
                             <br />
-                            {tempJobDescription.requirements}
+                            {tempApp.jobDescription.requirements}
 
                         </div>
                     </label>

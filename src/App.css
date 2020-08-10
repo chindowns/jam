@@ -52,6 +52,7 @@
   color: #5D5C61;
   font-size: 15px;
   font-weight: 400px;
+  text-shadow: none;
   width: 530px;
 }
 
@@ -156,10 +157,10 @@ header {
 }
 
 .nav {
-  justify-content: center;
   font-weight: 500;
   font-size: 25px;
   color: #379683;
+  
 }
 
 .nav:hover {
@@ -170,8 +171,16 @@ header {
   color: snow ;
 }
 
+#view{
+  padding-left: 140px;
+}
+
 #jumbo {
   margin: 50px auto;
+}
+
+#brand {
+  display: inline-flex;
 }
 
 #search-form {

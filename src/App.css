@@ -22,6 +22,10 @@
     text-shadow: 1px 1px 2px #5D5C61;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .form{
   display: flexbox;
   justify-content: center;
@@ -82,10 +86,6 @@ input:focus {
   border: 2px solid #557A95;
   background-color: snow;
   color: #5D5C61;
-}
-
-.underline {
-  text-decoration: underline;
 }
 
 button[type=submit] {
@@ -184,7 +184,17 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 0px;
+  }
+  textarea[type=textarea] {
+    width: 320px;
+  }
   #search-form {display: none;}
+  .nav { font-size: medium;}
+  .radius {width: 320px;}
+
 }
 
 @keyframes App-logo-spin {

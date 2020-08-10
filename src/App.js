@@ -23,9 +23,9 @@ function App() {
         </p>
         </div>
 
-        <Nav variant="" className=" nav">
-          <Nav.Link id="view" className="nav" href="/jam/#/view">View Application</Nav.Link>
-          <Nav.Link className="nav" href="/jam/#/add">Add Applications</Nav.Link>
+        <Nav variant="" className="nav">
+          <Nav.Link id="view" className="nav" href="/jam/#/view">View App</Nav.Link>
+          <Nav.Link className="nav" href="/jam/#/add">Add App</Nav.Link>
         </Nav>
         <Form inline id="search-form">
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />

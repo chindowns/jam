@@ -24,7 +24,6 @@ function App() {
         </div>
 
         <Nav variant="" className=" nav">
-          {/* <Nav.Link variant="outine" className="nav" eventKey="link-1" href="/jam/#/home">Home</Nav.Link> */}
           <Nav.Link id="view" className="nav" href="/jam/#/view">View Application</Nav.Link>
           <Nav.Link className="nav" href="/jam/#/add">Add Applications</Nav.Link>
         </Nav>

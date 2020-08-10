@@ -171,20 +171,20 @@ header {
   color: snow ;
 }
 
-#view{
-  padding-left: 140px;
+#brand {
+  display: inline-flex;
 }
 
 #jumbo {
   margin: 50px auto;
 }
 
-#brand {
-  display: inline-flex;
-}
-
 #search-form {
   opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #search-form {display: none;}
 }
 
 @keyframes App-logo-spin {

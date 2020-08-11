@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 // USE HashRouter vs BrowserRouter to display on G
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav, Form, FormControl, Button} from 'react-bootstrap';
@@ -6,12 +6,17 @@ import { Nav, Form, FormControl, Button} from 'react-bootstrap';
 
 import logo from './logo-white.png';
 import './App.css';
+import Modal from './components/modal';
 import Home from "./pages/home";
 import AddApplication from './pages/addApplication';
 import ViewApplication from './pages/viewApplications';
 import EditApplication from './pages/editApplication';
 
 function App() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  console.log(showModal)
 
   return (
     <div className="App">
@@ -43,6 +48,18 @@ function App() {
           <Route exact path="/edit" component={EditApplication} />
         </Switch>
       </Router>
+      
+      <Modal showModal = {showModal} ></Modal>
+      
+      <footer>
+        <Button 
+          variant="white" 
+          className="footer fas fa-comments-3"
+          onClick={() => setShowModal(true)}
+        >Add Comment</Button>
+      
+      
+      </footer>
     </div>
   );
 }

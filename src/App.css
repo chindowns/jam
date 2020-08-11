@@ -205,3 +205,12 @@ header {
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #5d5c6180;
+  color: snow;
+}

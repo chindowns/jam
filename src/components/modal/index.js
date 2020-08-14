@@ -21,8 +21,9 @@ export default (props) => {
         var requestOptions = {
             method: 'POST',
             headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
+            mode:'no-cors',
             body: raw,
             credentials: 'include',
             redirect: 'follow'

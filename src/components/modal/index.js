@@ -14,18 +14,17 @@ export default (props) => {
     const handleSubmit = () => {
         
         var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "multipart/form-data");
+        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
-        var raw = ({ "site": "jam", "email": feedback.email, "feedback": feedback.feedback });
+        var urlencoded = new URLSearchParams();
+        urlencoded.append("site", "jam");
+        urlencoded.append("email", feedback.email);
+        urlencoded.append("feedback", feedback.feedback);
 
         var requestOptions = {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            mode:'no-cors',
-            body: raw,
-            credentials: 'include',
+            headers: myHeaders,
+            body: urlencoded,
             redirect: 'follow'
         };
 

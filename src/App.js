@@ -18,7 +18,7 @@ function App() {
   const [showModal, setShowModal] = useState(false);
 
   const handleClose = () => setShowModal(false);
-  const handleShow = () => setShowModal(true);
+  // const handleShow = () => setShowModal(true);
 
   const currentYear = new Date().getFullYear();
 
@@ -36,7 +36,7 @@ function App() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ "site": "jam", "email": "tv@chindowns.com", "feedback": "8th test from JAM to localhost:4000" }),
+      body: raw,
       mode: 'no-cors',
       credentials: 'omit',
 

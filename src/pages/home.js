@@ -23,7 +23,7 @@ export default () => {
             <p>
                 This app uses your browsers internal DB, indexedDB to store application info.  <br />
                 The full Job Application Manager supports access from multible devices and browsers. <br />
-                Use <a href="https://job-kit.herokuapp.com" target="_blank">https://job-kit.herokuapp.com</a>
+                Use <a href="https://job-kit.herokuapp.com" target="_blank" rel="noopener noreferrer" >https://job-kit.herokuapp.com</a>
             </p>
         </div>
     )

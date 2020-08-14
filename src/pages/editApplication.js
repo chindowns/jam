@@ -16,7 +16,6 @@ export default (props) => {
     const applicationStore = new Store('job-manager', 'applications')
     const history = useHistory();
     let tempApp = {};
-    let tempJobDescription = {};
     let tempNotes = [];
 
     // Setting State for application, jobDescription & 
@@ -29,7 +28,7 @@ export default (props) => {
     useEffect(() => {
         setApplication(tempApp);
         setJobDescription(tempApp.jobDescription);
-    }, [tempApp.length])
+    }, [tempApp])
 
     const handleSubmit = (e) => {
         e.preventDefault()

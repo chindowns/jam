@@ -24,9 +24,13 @@ export default (props) => {
         var requestOptions = {
             method: 'POST',
             headers: myHeaders,
+            mode: 'no-cors',
             body: urlencoded,
             redirect: 'follow'
         };
+
+        console.log(urlencoded)
+        console.log(requestOptions);
 
         fetch("https://feedback-and-comments.herokuapp.com/api/feedback", requestOptions)
             .then(response => response.text())

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import $ from "jquery";
+// import $ from "jquery";
 
 
 export default (props) => {
@@ -16,21 +16,17 @@ export default (props) => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({ "site": "jam", "email": "tv@chindowns.com", "feedback": "8th test from JAM to localhost:4000" });
+        var raw = JSON.stringify({ "site": "jam", "email": feedback.email, "feedback": feedback.feedback });
 
         var requestOptions = {
             method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ "site": "jam", "email": "tv@chindowns.com", "feedback": "8th test from JAM to localhost:4000" }),
-            mode: 'no-cors',
-            credentials: 'omit',
-
+            headers: myHeaders,
+            body: raw,
+            credentials: 'include',
             redirect: 'follow'
         };
 
-        fetch("http://localhost:4000/api/feedback", requestOptions)
+        fetch("https://feedback-and-comment.herokuapp.com/api/feedback", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

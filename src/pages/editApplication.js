@@ -38,11 +38,10 @@ export default (props) => {
             tempNotes.push(contactNote)
         };
 
-        console.log(tempNotes);
         const updateApplication = {
             "companyName": application.companyName,
             "jobTitle": application.jobTitle,
-            "jobDescription": jobDescription,
+            "jobDescription": application.jobDescription,
             "source": application.source,
             "resume": application.resume,
             "dateApplied": application.dateApplied,
@@ -109,44 +108,22 @@ export default (props) => {
                 </label>
                 <br />
                 {editJobDescription ?
-                    (<><label className="form-label">Job Description Overview<br />
-                        <textarea id="editJobDescription-Overview"
+                    (<><label className="form-label">Job Description<br />
+                        <textarea id="editJobDescription"
                             type="textarea"
-                            name="jobDescription-Overview"
+                            name="jobDescription"
                             wrap="soft"
-                            defaultValue={tempApp.jobDescription.overview}
-                            onChange={e => setJobDescription({ ...jobDescription, 'overview': e.target.value ? e.target.value : tempApp.jobDescription.overview })} />
-                    </label>
-                        <br />
-                        <label className="form-label">Job Description Responsibilities<br />
-                            <textarea id="editJobDescription-Responsibilities"
-                                type="textarea"
-                                name="jobDescription-Responsibilities"
-                                wrap="soft"
-                                defaultValue={tempApp.jobDescription.responsibilities}
-                                onChange={e => setJobDescription({ ...jobDescription, 'responsibilities': e.target.value ? e.target.value : tempApp.jobDescription.responsibilities })} />
-                        </label>
-                        <br />
-                        <label className="form-label">Job Description Requirements<br />
-                            <textarea id="editJobDescription-Requirements"
-                                type="textarea"
-                                name="jobDescription-Requirements"
-                                wrap="soft"
-                                defaultValue={tempApp.jobDescription.requirements}
-                                onChange={e => setJobDescription({ ...jobDescription, 'requirements': e.target.value ? e.target.value : tempApp.jobDescription.requirements })} />
-                        </label>
+                            defaultValue={tempApp.jobDescription}
+                            onChange={e => setApplication({ ...application, 'jobDescription': e.target.value ? e.target.value : tempApp.jobDescription })} />
+                       </label>
                     </>)
                     :
                     <label className="form-label">Job Description<br />
                         <div className="radius text-left">
                             <div className="fa fa-pencil-square-o" style={{ position: "relative", float: "right", padding: "1px 3px 1px 7px" }} onClick={e => setEditJobDescription(true)}>
                             </div>
-                            {tempApp.jobDescription.overview}
+                            {tempApp.jobDescription}
                             <br />
-                            {tempApp.jobDescription.responsibilities}
-                            <br />
-                            {tempApp.jobDescription.requirements}
-
                         </div>
                     </label>
                 }

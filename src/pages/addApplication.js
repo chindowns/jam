@@ -15,7 +15,7 @@ export default () => {
         const newApplication = {
             "companyName": application.companyName,
             "jobTitle": application.jobTitle,
-            "jobDescription": jobDescription,
+            "jobDescription": application.jobDescription,
             "source": application.source,
             "resume": application.resume,
             "dateApplied": today,
@@ -65,31 +65,13 @@ export default () => {
                     placeholder="Link to Resume" />
                 </label>
                 <br />
-                <label className="form-label">Job Description Overview<br />
-                <textarea id="inputJobDescription-Overview"
+                <label className="form-label">Job Description<br />
+                <textarea id="inputJobDescription"
                     type="textarea"
                     name="jobDescription-Overview"
                     wrap="soft"
-                    onChange={e => setJobDescription({ ...jobDescription, 'overview': e.target.value })}
-                    placeholder="Job Description Overview" />
-                </label>
-                <br />
-                <label className="form-label">Job Description Responsibilities<br />
-                    <textarea id="inputJobDescription-Responsibilities"
-                        type="textarea"
-                        name="jobDescription-Responsibilities"
-                        wrap="soft"
-                        onChange={e => setJobDescription({ ...jobDescription, 'responsibilities': e.target.value })}
-                        placeholder="Job Description Responsibilities" />
-                </label>
-                <br />
-                <label className="form-label">Job Description Requirements<br />
-                    <textarea id="inputJobDescription-Requirements"
-                        type="textarea"
-                        name="jobDescription-Requirements"
-                        wrap="soft"
-                        onChange={e => setJobDescription({ ...jobDescription, 'requirements': e.target.value })}
-                        placeholder="Job Description Requirements" />
+                        onChange={e => setApplication({ ...application, 'jobDescription': e.target.value })}
+                    placeholder="Job Description" />
                 </label>
                 <br />
 

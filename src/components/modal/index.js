@@ -14,13 +14,15 @@ export default (props) => {
     const handleSubmit = () => {
         
         var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Content-Type", "multipart/form-data");
 
-        var raw = JSON.stringify({ "site": "jam", "email": feedback.email, "feedback": feedback.feedback });
+        var raw = ({ "site": "jam", "email": feedback.email, "feedback": feedback.feedback });
 
         var requestOptions = {
             method: 'POST',
-            headers: myHeaders,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
             body: raw,
             credentials: 'include',
             redirect: 'follow'

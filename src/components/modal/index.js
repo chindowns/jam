@@ -29,7 +29,7 @@ export default (props) => {
             redirect: 'follow'
         };
 
-        fetch("https://feedback-and-comment.herokuapp.com/api/feedback", requestOptions)
+        fetch("https://feedback-and-comments.herokuapp.com/api/feedback", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

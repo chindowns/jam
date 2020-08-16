@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 // USE HashRouter vs BrowserRouter to display on G
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Nav, Form, FormControl, Button} from 'react-bootstrap';
-// import { Nav } from 'react-bootstrap';
 
 import logo from './logo-white.png';
 import './App.css';
@@ -58,10 +57,8 @@ function App() {
         <Button 
           variant="white" 
           id="feedback"
-          onClick={() => setShowModal(true)}
-        >Leave Comment</Button>
-      
-      
+          onClick={() => setShowModal(true)} >Leave Comment</Button>
+
       </footer>
     </div>
   );
